@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Input Form</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>User Input Form</h1>
+        <form method="POST">
+            <label for="user_input">Enter something:</label>
+            <input type="text" id="user_input" name="user_input" required>
+            <button type="submit">Submit</button>
+        </form>
+        <div class="result">
+            {% if result %}
+                <p>{{ result }}</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
